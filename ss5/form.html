@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            background-color: lightblue;
+            width: 300px;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        div {
+            margin-top: 10px;
+        }
+        .title{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<form action="#" method="get">
+    <h2  style="background-color: bisque">Register</h2>
+    <h2  class="title" style="background-color: bisque">Register</h2>
+    <div>
+        <label for="id">ID</label>
+        <input id="id" type="password" name="id" placeholder="Enter id">
+    </div>
+    <div>
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+    </div>
+
+    <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Enter Name">
+    </div>
+    <div>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age">
+    </div>
+    <div>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+    </div>
+
+    <div>
+        <label>Subjects</label>
+        <input type="checkbox" name="subject" value="JAVA"> Java
+        <input type="checkbox" name="subject" value="PHP"> PHP
+        <input type="checkbox" name="subject" value="SQL"> SQL
+    </div>
+    <div>
+        <label>Class Name</label>
+        <select name="className">
+            <option value="">---Chọn lớp---</option>
+            <option value="C02">DN-C02</option>
+            <option value="C03">DN-C03</option>
+            <option value="C04">DN-C04</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="note">Note</label>
+        <textarea cols="20" rows="4" id="note" name="note"></textarea><br>
+    </div>
+    <div>
+        <button type="submit">Send</button>
+        <button type="submit" onclick="getInfo()">GetInfo</button>
+        <button type="reset">Reset</button>
+    </div>
+</form>
+<script>
+    function getInfo() {
+        let name = document.getElementById("name").value;
+        alert("hello " + name);
+    }
+</script>
+</body>
+</html>
