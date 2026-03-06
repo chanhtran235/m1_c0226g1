@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1 id="title">Tính tổng</h1>
+<input id="num1" placeholder="enter number 1" value="10">
+<input id="num2" placeholder="enter number 2" value="20">
+<button onclick="tinhTong()">Sum</button>
+<h2 id="result"></h2>
+<body>
+<script>
+    let ten =  prompt("Nhập tên của bạn","Chanhtv");
+    // alert("Ten của bạn là : "+ ten)
+    alert(`Ten của bạn là : ${ten}`);
+    function tinhTong() {
+        let number1 = +document.getElementById("num1").value;
+        let number2 = +document.getElementById("num2").value;
+       let conf = confirm("Bạn có muốn tính tổng không? ")
+        alert(conf)
+        let sum = number1 + number2;
+        document.getElementById("result").innerText = "Tổng là : " + sum
+    }
+</script>
+<!--<script src="my-js.js"></script>-->
+</body>
+</html>
