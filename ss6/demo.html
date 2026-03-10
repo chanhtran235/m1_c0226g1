@@ -11,13 +11,16 @@
 <h2 id="result"></h2>
 <body>
 <script>
-    let ten =  prompt("Nhập tên của bạn","Chanhtv");
+    // let ten = prompt("Nhập tên của bạn", "Chanhtv");
     // alert("Ten của bạn là : "+ ten)
-    alert(`Ten của bạn là : ${ten}`);
+    // alert(`Ten của bạn là : ${ten}`); ctrl + /
+    // format code : ctrl + alt + L
+    // copy thêm dòng : ctrl + D
+
     function tinhTong() {
         let number1 = +document.getElementById("num1").value;
         let number2 = +document.getElementById("num2").value;
-       let conf = confirm("Bạn có muốn tính tổng không? ")
+        let conf = confirm("Bạn có muốn tính tổng không? ")
         alert(conf)
         let sum = number1 + number2;
         document.getElementById("result").innerText = "Tổng là : " + sum

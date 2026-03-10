@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+
+    <style>
+
+        table {
+            border: 8px solid black;
+            padding: 15px;
+            background: #ddd;
+        }
+
+        input {
+            width: 80px;
+            height: 60px;
+            font-size: 28px;
+            text-align: center;
+            color: blue;
+            border: 3px solid #bbb;
+        }
+
+        .display {
+            width: 350px;
+            text-align: right;
+            font-size: 35px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<table>
+
+    <tr>
+        <td colspan="4">
+            <input id="window" class="display" type="text" value="">
+        </td>
+    </tr>
+
+    <tr>
+        <td><input onclick="inputData(this.value)" type="button" value="1"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="2"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="3"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="+"></td>
+    </tr>
+
+    <tr>
+        <td><input onclick="inputData(this.value)" type="button" value="4"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="5"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="6"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="-"></td>
+    </tr>
+
+    <tr>
+        <td><input onclick="inputData(this.value)" type="button" value="7"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="8"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="9"></td>
+        <td><input onclick="inputData('*')" type="button" value="x"></td>
+    </tr>
+
+    <tr>
+        <td><input onclick="clear1()" type="button" value="C"></td>
+        <td><input onclick="inputData(this.value)" type="button" value="0"></td>
+        <td><input onclick="calculate()" type="button" value="="></td>
+        <td><input type="button" value="/"></td>
+    </tr>
+
+</table>
+<script>
+    function inputData(char){
+        document.getElementById("window").value +=char;
+    }
+    function calculate(){
+       let result = document.getElementById("window").value;
+        document.getElementById("window").value =(eval(result));
+    }
+    function clear1(){
+        document.getElementById("window").value ="";
+    }
+</script>
+</body>
+</html>

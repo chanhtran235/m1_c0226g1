@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let day = +prompt("nhập ngày");
+    // let month = +prompt("nhập tháng");
+    // let year = +prompt("nhập năm");
+    //
+    // switch (month) {
+    //     case 2:
+    //         if (isLeapYear(year)) {
+    //             if (day >= 1 && day <= 28) {
+    //                 alert(`${day + 1}/${month}/${year}`);
+    //             } else if (day === 29) {
+    //                 alert(`1/3/${year}`);
+    //             } else {
+    //                 alert("ngày không hợp lệ");
+    //             }
+    //         } else {
+    //             if (day >= 1 && day <= 27) {
+    //                 alert(`${day + 1}/${month}/${year}`);
+    //             } else if (day === 28) {
+    //                 alert(`1/3/${year}`);
+    //             } else {
+    //                 alert("ngày không hợp lệ");
+    //             }
+    //         }
+    //         break;
+    //
+    //     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+    //         if (day >= 1 && day <= 30) {
+    //             alert(`${day + 1}/${month}/${year}`);
+    //         } else if (day === 31) {
+    //             if (month === 12) {
+    //                 alert(`1/1/${year + 1}`);
+    //             } else {
+    //                 alert(`1/${month + 1}/${year}`);
+    //             }
+    //         } else {
+    //             alert("ngày không hợp lệ");
+    //         }
+    //         break;
+    //
+    //     case 4: case 6: case 9: case 11:
+    //         if (day >= 1 && day <= 29) {
+    //             alert(`${day + 1}/${month}/${year}`);
+    //         } else if (day === 30) {
+    //             alert(`1/${month + 1}/${year}`);
+    //         } else {
+    //             alert("ngày không hợp lệ");
+    //         }
+    //         break;
+    //
+    //     default:
+    //         alert("tháng không hợp lệ");
+    // }
+    //
+    // function isLeapYear(year) {
+    //     return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+    // }
+
+
+    let day = +prompt("nhập ngày");
+    let month = +prompt("nhập tháng");
+    let year = +prompt("nhập năm");
+    let maxDay;
+    // giới hạn ngày lớp nhất trong thang theo năm
+    if (month === 2) {
+        if (isLeapYear(year)) {
+            maxDay = 29;
+        } else {
+            maxDay = 28;
+        }
+    } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+        maxDay = 30;
+    } else {
+        maxDay = 31;
+    }
+
+    // tính ngày tiếp theo
+    if (day < maxDay) {
+        day++;
+    } else {
+        day = 1;
+        if (month === 12) {
+            month = 1;
+            year++;
+        } else {
+            month++;
+        }
+    }
+    alert(`${day}/${month}/${year}`);
+
+    function isLeapYear(year) {
+        return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+    }
+</script>
+</body>
+</html>
