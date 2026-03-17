@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // khai báo mảng có sẵn pt
+    // let numbers = [111,10,20,30];
+    // let cars = new Array("Vinfast","AHonda","Toyota");
+    //  function myIncludes(value,array){
+    //      for (const valueElement of array) {
+    //          if (valueElement==value){
+    //              return true;
+    //          }
+    //      }
+    //      return false;
+    //  }
+    //  alert(myIncludes("101",numbers));
+
+     // alert(cars.includes("Vinfast"));// true
+     // alert(cars.indexOf("abc"))// -1
+
+    // sắp xếp => declare funciton
+    // function compare(a,b){
+    //
+    //     return a-b;
+    // }
+    // express function
+    // const sapXep = function (a,b){
+    //     return a-b;
+    // }
+    // // Arrow function
+    // const sapXep2 =(a,b)=>a-b;
+    //
+    // alert(typeof sapXep2)
+    // numbers.sort(function (a,b){return a-b});
+    //
+    // alert(numbers)
+    // khai báo mảng có n phần tử và nhập giá trị cho nó
+    // let n = +prompt("nhập độ dài mảng");
+    // let students = new Array(n);// mảng có 5 phần tử
+    // for (let i = 0; i <students.length; i++) {
+    //     let student = prompt("nhập phần tử thứ "+ i);
+    //     students[i] = student;
+    // }
+    // let students = [];
+    // for (let i = 0; i <n ; i++) {
+    //     let student = prompt("nhập phần tử thứ "+ i);
+    //         students.push(student);
+    // }
+    // for (let i =0 ; i<students.length ; i++) {
+    //    students[i] += "CG";
+    // }
+
+
+    // for(let student of students){
+    //       student +=student + " CG"
+    // }
+    //
+    // for(let index in students){
+    //
+    // }
+    // alert(students);
+
+    // tạo mảng 2 chiều (5,4)
+    let arrray = new Array(3);
+    for (let i = 0; i <arrray.length ; i++) {
+        arrray[i] = new Array(2);
+        for (let j = 0; j <arrray[i].length ; j++) {
+            arrray[i][j] = +prompt(`nhập phần tử thứ ${i}-${j}`)
+        }
+    }
+
+    for (let i = 0; i <arrray.length ; i++) {
+        for (let j = 0; j <arrray[i].length ; j++) {
+         document.write(arrray[i][j]+",")
+        }
+        document.write("<br>")
+    }
+
+
+</script>
+</body>
+</html>

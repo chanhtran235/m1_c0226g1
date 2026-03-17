@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button onclick="hienThiThucDon()">Menu</button>
+<script>
+  function hienThiThucDon() {
+    let danhSach = "";
+    let tiepTucMenu = true;
+    let dem = 1
+    let tongTien = 0;
+    let slCafe=0;
+    let cafeDaChon=false;
+    let caCaoDaChon=false;
+    let nuocCamDaChon=false;
+    let slCacao=0;
+    let slNuocCam=0;
+    while (tiepTucMenu) {
+      let chon = +prompt("---------------------- Menu---------- ------------\n" +
+              "Hãy nhập số để chọn đồ uống\n" +
+              "1. Cafe :          10K\n" +
+              "2. Ca cao:        15K\n" +
+              "3. Nước cam:   20K\n" +
+              "4. Kết thúc        \n" +
+              "---------------- Danh sách đã chon-----------------\n" + danhSach +
+              "                                                         $ Tổng tiền :" + tongTien + " K");
+      switch (chon) {
+        case 1:
+          if (cafeDaChon){
+            slCafe++
+          }else {
+            danhSach += dem + `.Cafe \n`;
+            cafeDaChon = true;
+            dem++;
+          }
+          tongTien += 10
+
+          break;
+        case 2:
+          if (caCaoDaChon){
+            slCacao++
+          }else {
+            danhSach += dem + `.Cacao \n`;
+            caCaoDaChon =true;
+            dem++;
+          }
+          tongTien += 15
+          break;
+        case 3:
+          if (nuocCamDaChon){
+            slNuocCam++
+          }else {
+            danhSach += dem + `.Nước Cam \n`;
+            nuocCamDaChon =true;
+            dem++;
+          }
+          tongTien += 20
+          dem++
+          break;
+        default:
+          tiepTucMenu = false;
+      }
+    }
+    alert("------Danh sách đã chọn------ :\n" + danhSach + "\n  $ Tổng tiền: " + tongTien + " K");
+  }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
