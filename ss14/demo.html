@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhiệm vụ
+    // 1. kiểm trả 1 số có phải là snt hay không?
+    // 2. tính tổng các snt trong mảng
+    // 3. in ra 20 số nguyên tố đầu tiên
+
+    // function
+    function isPrime(n){
+        if (n<2){
+            return false;
+        }
+        for (let i = 2; i <=Math.sqrt(n); i++) {
+            if (n % i === 0) {
+               return false;
+            }
+        }
+        return true;
+    }
+
+    let n = +prompt("nhập số kiểm tra");
+
+    document.write(isPrime(n)?"là snt":"không phải snt");
+
+    let array = [2,4,3,5,6,7];
+    let sum =0;
+    for (let k = 0; k <array.length ; k++) {
+        if (isPrime(array[k])){
+            sum +=array[k];
+        }
+    }
+    document.write("-----------------------------<br>")
+    document.write("tổng "+ sum)
+    document.write("-----------------------------<br>")
+    let number =2;
+    let primeCount = 0;
+    while (primeCount <20){
+        if (isPrime(number)){
+            document.write(number + ",")
+            primeCount ++;
+        }
+        number++;
+    }
+
+
+</script>
+</body>
+</html>

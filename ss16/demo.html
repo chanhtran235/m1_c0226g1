@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const Student = function (id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.study = function (subject) {
+            console.log("đang học môn :" + subject);
+        }
+    }
+
+    class SinhVien {
+        id;
+        name;
+        age;
+        // constructor là một method đặc biêt : dùng để khởi tạo đối tượng và được gọi thông quá từ khoá new
+        constructor(ma, ten, tuoi) {
+            this.id = ma;
+            this.name = ten;
+            this.age = tuoi;
+        }
+
+        study(subject) {
+            console.log("đang học môn :" + subject);
+        }
+    }
+
+
+    let sinhVien1= new SinhVien(3,"minh",32);
+    let student1 = new Student(1, "chánh", 43);
+    let student2 = new Student(2, "hải", 29);
+    console.log(student1.name);
+    student1.study("toán");
+    student2.study("Văn");
+
+    // let student1 = {
+    //     id: 1,
+    //     name: "chánh",
+    //     age: 43,
+    //     study: function (subject) {
+    //         console.log("Đang học môn:" + subject)
+    //     }
+    // }
+    // let student2 = {
+    //     id: 1,
+    //     name: "chánh",
+    //     age: 43,
+    //     study: function (subject) {
+    //         console.log("Đang học môn:" + subject)
+    //     }
+    // }
+    // console.log(student1.name);
+    // student1.study("Toán")
+</script>
+</body>
+</html>
